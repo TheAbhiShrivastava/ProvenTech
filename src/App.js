@@ -1,31 +1,24 @@
+
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Navbar from './Components/Navbar';
-import ImageCarousel from './Components/Image';
+import Home from './Components/Home'
+import Services from './Pages/Services.jsx';
+import Work from './Pages/Work.jsx';
+import Insights from './Pages/Insights';
+import Careers from './Pages/Careers';
+import About from './Pages/About';
+import Contact from './Pages/Contact';
 
-
-const Services = () => <div>Services Page</div>;
-const Work = () => <div>Work Page</div>;
-const Insights = () => <div>Insights Page</div>;
-const Careers = () => <div>Careers Page</div>;
-const About = () => <div>About Page</div>;
-const Contact = () => <div>Contact Page</div>;
-
-const images = [
-  './Asset/Screenshot 2024-02-26 215538.png',
-  './Asset/Screenshot 2024-02-27 091247.png',
-  './Asset/Screenshot 2024-02-27 092242.png',
-  // Add more image paths as needed
-];
 
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <div className="p-4">
+   
+      <div>
         <Routes>
-          <Route path="/#" element={<Services />} />
+       <Route path = "/" element = {<Home/>} />
+          <Route path="/Services" element={<Services />} />
           <Route path="/work" element={<Work />} />
           <Route path="/insights" element={<Insights />} />
           <Route path="/careers" element={<Careers />} />
@@ -33,10 +26,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
-      <div>
-      <ImageCarousel images={images} interval={5000} />
-    </div>
-
+     
     </div>
   );
 }

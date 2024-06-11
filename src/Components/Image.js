@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 
 const ImageCarousel = ({ images, interval = 3000 }) => {
@@ -12,8 +13,8 @@ const ImageCarousel = ({ images, interval = 3000 }) => {
   }, [images, interval]);
 
   return (
-    <div className="relative w-full max-w-3xl mx-auto overflow-hidden">
-      <div className="w-full h-64 sm:h-80 md:h-96">
+    <div className="relative w-full max-w-1xl mx-auto overflow-hidden">
+      <div className="w-full h-vh sm:h-80 md:h-96 relative">
         {images.map((image, index) => (
           <img
             key={index}
@@ -30,3 +31,5 @@ const ImageCarousel = ({ images, interval = 3000 }) => {
 };
 
 export default ImageCarousel;
+
+
